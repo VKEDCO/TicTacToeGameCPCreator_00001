@@ -1,0 +1,32 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.vkedco.mobappdev.tic_tac_toe_game_cp_creator_00001"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="15" />
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".TicTacToeCPCreatorAct"
+            android:label="@string/title_activity_tic_tac_toe_cpcreator" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <provider
+        	android:name=".TicTacToeGameContentProvider"
+        	android:authorities="org.vkedco.mobappdev.content_providers.tic_tac_toe_boards"
+        	android:process=":org.vkedco.mobappdev.content_providers.tic_tac_toe_boards"
+        	>
+		</provider>
+    </application>
+
+</manifest>
